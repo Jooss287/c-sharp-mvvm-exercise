@@ -9,6 +9,24 @@
       Background="{StaticResource background}"
       Title="Menu">
 
+    <Page.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Ellipse Fill="#AA000000" Margin="10, 10, 0, 0"/>
+                            <Ellipse Fill="{TemplateBinding Background}" Margin="0, 0, 10, 10"/>
+                            <Viewbox Margin="5, 5, 15, 15">
+                                <ContentPresenter/>
+                            </Viewbox>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+    
     <StackPanel Orientation="Vertical" Margin="20,87,0,157">
         <StackPanel Orientation="Horizontal">
             <Button Content="Products" Width="100" Height="100" Margin="10" Click="Button_Click_2"/>
